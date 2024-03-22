@@ -1,0 +1,25 @@
+.TransactionWwrapper > h4 {
+  margin-top: 5px;
+  padding: 10px;
+}
+.transaction-table {
+  border: none;
+  background-color: #fff;
+  width: 95%;
+  margin-left: 2.5%;
+  height: 30vh;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* Adjust the spacing between rows */
+}
+
+.transaction-table th,
+.transaction-table td {
+  border-bottom: 1px solid salmon;
+
+  padding: 5px; /* Adjust the padding */
+  font-size: 14px; /* Adjust the font size */
+}
+
+.transaction-table th {
+  font-weight: bold;
+}

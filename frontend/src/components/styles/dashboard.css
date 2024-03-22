@@ -1,0 +1,17 @@
+.dashboardWrapper {
+  display: flex;
+}
+.sidebar {
+  width: 14%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  border-right: 1px solid #ccc;
+  z-index: 1000;
+}
+.dashboardMain {
+  width: 86%;
+  margin-left: 15%;
+}

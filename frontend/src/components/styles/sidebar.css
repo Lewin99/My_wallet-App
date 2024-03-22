@@ -1,0 +1,61 @@
+.sidebar-Wrapper {
+  height: 100vh;
+  background-color: #181a1e;
+}
+.sidebar-logo {
+  width: 50%;
+  padding-top: 30px;
+  margin-left: 15%;
+}
+.sidebar-logo > img {
+  width: 70%;
+  margin-left: 30%;
+}
+
+.sidebar-logo > h4 {
+  margin-left: 25%;
+  color: aliceblue;
+  font-size: large;
+  font-style: italic;
+  font-family: cursive;
+}
+
+.sidebar-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  color: #7d8da1;
+}
+
+.sidebar-links > div {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.sidebar-links > div > div {
+  margin-right: 10px;
+}
+
+.sidebar-links > div > div > span {
+  font-weight: bold;
+}
+
+.sidebar-links > div:hover {
+  cursor: pointer;
+  color: aliceblue;
+  margin-left: 0.8rem;
+}
+.sidebar-links > div {
+  transition: margin-left 0.5s ease;
+}
+
+.sidebar-links > .Logout {
+  margin-top: 40px;
+}
+
+.heading {
+  font-size: 0.8rem;
+}
