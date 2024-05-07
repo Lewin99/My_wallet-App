@@ -9,8 +9,6 @@ const DoughnutChart: React.FC = () => {
   const expensesAmount: number = finData.amountExpense;
   const savingsAmount: number = finData.amountSaved;
 
-  const totalAmount = incomeAmount + expensesAmount + savingsAmount;
-
   const [doughnutData] = useState({
     labels: ["Income", "Expenses", "Savings"],
     datasets: [
@@ -34,9 +32,6 @@ const DoughnutChart: React.FC = () => {
   return (
     <div className="doughnut-chart-container">
       <div className="doughnut-chart">
-        <div className="totalAmount">
-          <h4>{totalAmount}$</h4>
-        </div>
         <Doughnut data={doughnutData} options={options} />
       </div>
       <div className="chartLegends">
