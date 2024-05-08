@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import { lightTheme, darkTheme } from "../Themes/themes";
 
 export const StyledSidebarWrapper = styled.div`
   height: 100vh;
-  background-color: ${(props) =>
-    props.theme.mode === "light"
-      ? props.theme.light.background
-      : props.theme.dark.background};
+  background-color: ${(props) => props.theme.background};
+  color: ${(props) => props.theme.color};
+  font-weight: medium;
 `;
 
 export const StyledLogoWrapper = styled.div`
@@ -23,10 +21,6 @@ export const StyledLogoImage = styled.img`
 export const StyledLogoText = styled.h4`
   margin-left: 25%;
   font-size: large;
-  color: ${(props) =>
-    props.theme.mode === "light"
-      ? props.theme.light.text
-      : props.theme.dark.text};
   font-style: italic;
   font-family: cursive;
 `;
@@ -42,15 +36,10 @@ export const StyledLinkItem = styled.div`
   display: flex;
   align-items: center;
   padding: 10px;
-  color: #7d8da1;
   margin-left: 20px;
 
   &:hover {
     cursor: pointer;
-    color: ${(props) =>
-      props.theme.mode === "light"
-        ? props.theme.light.text
-        : props.theme.dark.text};
     margin-left: 0.8rem;
   }
 

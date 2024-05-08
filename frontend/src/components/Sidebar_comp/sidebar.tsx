@@ -17,10 +17,17 @@ import BarChartIcon from "@mui/icons-material/BarChart";
 import AssessmentIcon from "@mui/icons-material/Assessment";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
+import { useTheme } from "../contexts/ThemeContext";
 
 const Sidebar: React.FC = () => {
+  const { mode } = useTheme();
   return (
-    <StyledSidebarWrapper>
+    <StyledSidebarWrapper
+      theme={{
+        textcolor: mode === "dark" ? "#7d8da1" : "#46484a",
+        background: mode === "dark" ? "#181a1e" : "#f6f6f9",
+      }}
+    >
       <StyledLogoWrapper>
         <StyledLogoImage
           src="https://i.ibb.co/v30tzD8/pngaaa-com-4457319.png"
