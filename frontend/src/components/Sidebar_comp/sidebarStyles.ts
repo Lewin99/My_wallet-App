@@ -22,7 +22,7 @@ export const StyledLogoText = styled.h4`
   margin-left: 25%;
   font-size: large;
   font-style: italic;
-  font-family: cursive;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 `;
 
 export const StyledLinksWrapper = styled.div`

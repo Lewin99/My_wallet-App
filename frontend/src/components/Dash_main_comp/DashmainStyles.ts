@@ -103,7 +103,7 @@ export const BarChartWrapper = styled.div`
 
 export const BarChartTitle = styled.h4`
   display: flex;
-  color: #46484a;
+  color: ${(props) => props.theme.textcolor};
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   justify-content: center;
   align-items: center;

@@ -100,7 +100,13 @@ const Main: React.FC = () => {
           }}
         >
           <BarChartWrapper>
-            <BarChartTitle>Budgets Overview</BarChartTitle>
+            <BarChartTitle
+              theme={{
+                textcolor: mode === "dark" ? "#7d8da1" : "#46484a",
+              }}
+            >
+              Budgets Overview
+            </BarChartTitle>
             <Barchart />
           </BarChartWrapper>
         </BarchartCard>

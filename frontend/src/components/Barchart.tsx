@@ -1,9 +1,11 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
-import { budgets, Budget, BudgetData } from "./data/budgets"; 
+import { budgets, Budget, BudgetData } from "./data/budgets";
 import { useState } from "react";
+import { useTheme } from "./contexts/ThemeContext";
 
 const Barchart: React.FC = () => {
+  const { mode } = useTheme();
   const firstBudget: Budget = budgets[0];
   const budgetData = useState<BudgetData>({
     labels: firstBudget.categories.map((data) => data.name),
@@ -21,13 +23,44 @@ const Barchart: React.FC = () => {
         borderWidth: 1,
       },
     ],
-  })[0]; // Use the state directly
+  })[0];
 
   const options = {
     responsive: true,
     plugins: {
       legend: {
         position: "bottom" as const,
+        labels: {
+          color: mode === "dark" ? "#7d8da1" : "#46484a",
+          font: {
+            size: 14,
+            family: " Verdana, Geneva, Tahoma, sans-serif;",
+          },
+        },
+      },
+    },
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: "Categories",
+          color: mode === "dark" ? "#7d8da1" : "#46484a",
+          family: " Verdana, Geneva, Tahoma, sans-serif",
+        },
+        ticks: {
+          color: mode === "dark" ? "#7d8da1" : "#46484a",
+        },
+      },
+      y: {
+        title: {
+          display: true,
+          text: "Amount",
+          color: mode === "dark" ? "#7d8da1" : "#46484a",
+          family: " Verdana, Geneva, Tahoma, sans-serif",
+        },
+        ticks: {
+          color: mode === "dark" ? "#7d8da1" : "#46484a",
+        },
       },
     },
   };
