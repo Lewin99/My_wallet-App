@@ -127,13 +127,13 @@ export const DoughnutChartWrapper = styled.div`
 
 export const DoughnutChartTitle = styled.h4`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #46484a;
+  color: ${(props) => props.theme.textcolor};
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  justify-content: center;
+  align-items: center;
   font-size: 0.8rem;
-  padding: 10px;
-  margin-top: 20px;
+  margin-top: 30px;
+  padding-bottom: 30px;
 `;
 
 export const FinancialGoalsWrapper = styled.div`

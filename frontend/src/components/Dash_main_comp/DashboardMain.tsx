@@ -26,7 +26,7 @@ import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalance
 import TrendingUpOutlinedIcon from "@mui/icons-material/TrendingUpOutlined";
 import TrendingDownOutlinedIcon from "@mui/icons-material/TrendingDownOutlined";
 import Barchart from "../Barchart";
-import DoughnutChart from "../Doughnut";
+import DoughnutChart from "../Dougnut_comp/Doughnut";
 import FinancialGoalsCard from "../FinancialGoalsCard";
 import { useTheme } from "../contexts/ThemeContext";
 

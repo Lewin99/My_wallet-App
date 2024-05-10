@@ -1,8 +1,8 @@
 import React from "react";
-import { finData } from "./data/budgets";
+import { finData } from "../data/budgets";
 import { Doughnut } from "react-chartjs-2";
 import { useState } from "react";
-import "./styles/doughnut.css";
+import "../styles/doughnut.css";
 
 const DoughnutChart: React.FC = () => {
   const incomeAmount: number = finData.amountIncome;
