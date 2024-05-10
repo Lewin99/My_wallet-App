@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "./Sidebar_comp/sidebar";
 import Header from "./Header";
-import Main from "./DashboardMain";
+import Main from "./Dash_main_comp/DashboardMain";
 import "./styles/dashboard.css";
 
 const Dashboard: React.FC = () => {
