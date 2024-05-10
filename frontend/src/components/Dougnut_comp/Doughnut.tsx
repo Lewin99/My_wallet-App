@@ -1,68 +1,68 @@
 import React from "react";
 import { finData } from "../data/budgets";
 import { Doughnut } from "react-chartjs-2";
-import { useState } from "react";
-import "../styles/doughnut.css";
+import {
+  StyledDoughnutChart,
+  DoughnutContainer,
+  LeftLegend,
+  RightLegend,
+  LegendItem,
+  Dot,
+  Amount,
+} from "./DougnutStyles";
+
+const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      display: false,
+    },
+  },
+};
 
 const DoughnutChart: React.FC = () => {
   const incomeAmount: number = finData.amountIncome;
   const expensesAmount: number = finData.amountExpense;
   const savingsAmount: number = finData.amountSaved;
 
-  const [doughnutData] = useState({
+  const doughnutData = {
     labels: ["Income", "Expenses", "Savings"],
     datasets: [
       {
         label: "Financial Overview",
         data: [incomeAmount, expensesAmount, savingsAmount],
-        backgroundColor: ["#41f1b6", "#ff6384", "#7380ec"],
+        backgroundColor: ["#41f1b6", "#ff7782", "#7380ec"],
       },
     ],
-  });
-
-  const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        display: false,
-      },
-    },
   };
 
   return (
-    <div className="doughnut-chart-container">
-      <div className="doughnut-chart">
+    <StyledDoughnutChart>
+      <DoughnutContainer>
         <Doughnut data={doughnutData} options={options} />
-      </div>
-      <div className="chartLegends">
-        <div className="left">
-          <div className="income">
-            <div className="incomeDot"></div>
-            <span>Income</span>
-          </div>
-          <div className="expenses">
-            <div className="expensesDot"></div>
-            <span>Expenses</span>
-          </div>
-          <div className="savings">
-            <div className="savingsDot"></div>
-            <span>Savings</span>
-          </div>
-        </div>
+      </DoughnutContainer>
 
-        <div className="right">
-          <div className="incomeAmount">
-            <span>{incomeAmount}$</span>
-          </div>
-          <div className="expensesAmount">
-            <span>{expensesAmount}$</span>
-          </div>
-          <div className="savingsAmount">
-            <span>{savingsAmount}$</span>
-          </div>
-        </div>
-      </div>
-    </div>
+      <LeftLegend>
+        <LegendItem>
+          <Dot bgColor="#41f1b6" />
+          <span>Income</span>
+        </LegendItem>
+        <LegendItem>
+          <Dot bgColor="#ff7782" />
+          <span>Expenses</span>
+        </LegendItem>
+        <LegendItem>
+          <Dot bgColor="#7380ec" />
+          <span>Savings</span>
+        </LegendItem>
+      </LeftLegend>
+
+      <RightLegend>
+        <Amount>{incomeAmount}$</Amount>
+        <Amount>{expensesAmount}$</Amount>
+        <Amount>{savingsAmount}$</Amount>
+      </RightLegend>
+    </StyledDoughnutChart>
   );
 };
 
