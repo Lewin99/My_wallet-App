@@ -22,7 +22,7 @@ export const useTheme = () => {
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [mode, setMode] = useState<"light" | "dark">("dark");
+  const [mode, setMode] = useState<"light" | "dark">("light");
 
   // Function to toggle between light and dark modes
   const toggleMode = () => {

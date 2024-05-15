@@ -20,6 +20,11 @@ export const DashboardTitle = styled.h4`
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 `;
 
+export const DashboardHeadersection = styled.div`
+  width: 100%;
+  height: 30%;
+`;
+
 export const CardsWrapper = styled.div`
   width: 75%;
   margin-left: 10px;
@@ -81,7 +86,7 @@ export const InfoWrapper = styled.div`
 
 export const DataVisualsWrapper = styled.div`
   width: 100%;
-  height: 50vh;
+  height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,7 +96,7 @@ export const DataVisualsWrapper = styled.div`
 export const BarchartCard = styled.div`
   width: 60%;
   background-color: ${(props) => props.theme.background};
-  height: 90%;
+  height: 90% auto;
   border: 2px solid rgba(132, 139, 200, 0.18);
   border-radius: 1.5rem;
 `;
@@ -101,7 +106,7 @@ export const BarChartWrapper = styled.div`
   padding: 20px;
 `;
 
-export const BarChartTitle = styled.h4`
+export const Title = styled.h4`
   display: flex;
   color: ${(props) => props.theme.textcolor};
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -111,35 +116,21 @@ export const BarChartTitle = styled.h4`
   padding: 10px;
 `;
 
-export const DoughnutChartCard = styled.div`
-  width: 35%;
-  height: 90%;
-  background: ${(props) => props.theme.background};
-  border: 2px solid rgba(132, 139, 200, 0.18);
-  border-radius: 1.5rem;
-`;
-
-export const DoughnutChartWrapper = styled.div`
-  margin-top: 10px;
-  width: 40%;
-  margin-left: 100px;
-`;
-
-export const DoughnutChartTitle = styled.h4`
+export const TitleFin = styled.h4`
   display: flex;
   color: ${(props) => props.theme.textcolor};
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   justify-content: center;
   align-items: center;
   font-size: 0.8rem;
-  margin-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 25px;
 `;
 
 export const FinancialGoalsWrapper = styled.div`
-  width: 30%;
+  width: 35%;
+  margin-left: 30px;
   background-color: ${(props) => props.theme.background};
-  height: 45vh;
+  height: 60vh auto;
   border: 2px solid rgba(132, 139, 200, 0.18);
   border-radius: 1.5rem;
 `;
