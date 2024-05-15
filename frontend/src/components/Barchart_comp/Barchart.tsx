@@ -52,7 +52,6 @@ const Barchart: React.FC = () => {
         },
         ticks: {
           color: mode === "dark" ? "#7d8da1" : "#46484a",
-          display: false, // Hide grid lines
         },
       },
       y: {
@@ -66,7 +65,6 @@ const Barchart: React.FC = () => {
         },
         ticks: {
           color: mode === "dark" ? "#7d8da1" : "#46484a",
-          display: false,
         },
       },
     },

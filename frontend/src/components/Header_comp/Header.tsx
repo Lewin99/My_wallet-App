@@ -1,18 +1,18 @@
 import React from "react";
-import "./styles/header.css";
+import { Profile, Info, ProfilePhoto } from "./headerStyles";
 
 const Header: React.FC = () => {
   return (
-    <div className="profile">
-      <div className="info">
+    <Profile>
+      <Info>
         <p>
           hey,<b>Daniel</b>
         </p>
-      </div>
-      <div className="profile-photo">
+      </Info>
+      <ProfilePhoto>
         <img src="https://i.ibb.co/nmH3KPs/prof1.jpg" alt="prof1" />
-      </div>
-    </div>
+      </ProfilePhoto>
+    </Profile>
   );
 };
 
