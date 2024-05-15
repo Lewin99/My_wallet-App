@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/Dashboard_comp/Dashboard";
 import { useTheme } from "./components/contexts/ThemeContext";
 
 function App() {
