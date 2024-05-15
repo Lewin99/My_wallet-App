@@ -1,8 +1,9 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
-import { budgets, Budget, BudgetData } from "./data/budgets";
+import { budgets, Budget, BudgetData } from "../data/budgets";
 import { useState } from "react";
-import { useTheme } from "./contexts/ThemeContext";
+import { useTheme } from "../contexts/ThemeContext";
+import { ChartContainer } from "./barchartStyles";
 
 const Barchart: React.FC = () => {
   const { mode } = useTheme();
@@ -34,7 +35,7 @@ const Barchart: React.FC = () => {
           color: mode === "dark" ? "#7d8da1" : "#46484a",
           font: {
             size: 14,
-            family: " Verdana, Geneva, Tahoma, sans-serif;",
+            family: "Verdana, Geneva, Tahoma, sans-serif",
           },
         },
       },
@@ -45,10 +46,13 @@ const Barchart: React.FC = () => {
           display: true,
           text: "Categories",
           color: mode === "dark" ? "#7d8da1" : "#46484a",
-          family: " Verdana, Geneva, Tahoma, sans-serif",
+          font: {
+            family: "Verdana, Geneva, Tahoma, sans-serif",
+          },
         },
         ticks: {
           color: mode === "dark" ? "#7d8da1" : "#46484a",
+          display: false, // Hide grid lines
         },
       },
       y: {
@@ -56,16 +60,23 @@ const Barchart: React.FC = () => {
           display: true,
           text: "Amount",
           color: mode === "dark" ? "#7d8da1" : "#46484a",
-          family: " Verdana, Geneva, Tahoma, sans-serif",
+          font: {
+            family: "Verdana, Geneva, Tahoma, sans-serif",
+          },
         },
         ticks: {
           color: mode === "dark" ? "#7d8da1" : "#46484a",
+          display: false,
         },
       },
     },
   };
 
-  return <Bar data={budgetData} options={options} />;
+  return (
+    <ChartContainer>
+      <Bar data={budgetData} options={options} />
+    </ChartContainer>
+  );
 };
 
 export default Barchart;
